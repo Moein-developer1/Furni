@@ -1,5 +1,5 @@
 // Import tw-elements components
-import { Carousel, Modal , Input , Collapse , initTWE } from "../node_modules/tw-elements/js/tw-elements.es.min.js";
+import { Carousel, Modal , Input , Collapse , initTWE } from "./tw-elements.es.min.js";
 // Initialize tw-elements components
 initTWE({ Carousel , Modal , Input , Collapse });
 
