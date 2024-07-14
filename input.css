@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .mobile__navbar{
+        @apply fixed top-[4.8rem] inset-x-0 h-0 p-0 bg-darkGreen overflow-hidden flex flex-col gap-6 ;
+    };
+    
+    .mobile__navbar.open{
+        @apply h-auto p-6;
+    };
+    
+    .desktop__navbar{
+        @apply items-center gap-12 h-auto flex-row relative top-0 p-0;
+    };
+
+    .desktop__navbar.open{
+        @apply h-auto p-0;
+    };
+
+    .header__description{
+        @apply text-sm max-w-md opacity-60 leading-7;
+    };
+
+    .section__title{
+        @apply text-3xl font-semibold opacity-80;
+    };
+
+    .section__description{
+        @apply opacity-70 leading-7 max-w-md mx-auto;
+    }
+}
+
+
+.nav__link.active,
+.nav__link.active ~ .link__underline{
+    opacity: 100%;
+    width: 100%;
+}
+
+.hamburger{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    transition: all .3s;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transition: all .3s;    
+    background-color: #fff;
+}
+
+.hamburger-middle{
+    transform: translateY(8px);
+}
+
+.hamburger-bottom{
+    transform: translateY(16px);
+}
+
+.open.hamburger{
+    transform: rotate(90deg);
+}
+
+.open .hamburger-top{
+    transform: rotate(45deg) translate(6px,6px);
+}
+
+.open .hamburger-middle{
+    opacity: 0;
+}
+
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translate(-6px,6px);
+}

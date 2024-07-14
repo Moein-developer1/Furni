@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furni - About page</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Font awsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Output css file -->
+    <link rel="stylesheet" href="./style/output.css">
+    <!-- AOS css file -->
+    <link href="style/aos.css" rel="stylesheet">
+</head>
+<body class="bg-light dark:bg-slate-800 dark:text-white overflow-x-hidden">
+
+    <div id="spinnerContainer" class="min-h-screen bg-darkGreen z-40 flex items-center justify-center">
+        <div
+        class="inline-block h-10 w-10 animate-spin rounded-full border-4 border-solid border-e-transparent align-[-0.125em] border-customYellow motion-reduce:animate-[spin_1.5s_linear_infinite]"
+        role="status">
+        <span
+          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Loading...</span>
+      </div>
+    </div>
+
+
+    <div id="websiteContent" class="website__content hidden">
+    <!-- Navbar -->
+    <section id="navbar" class="fixed top-0 inset-x-0 bg-darkGreen text-white border-b-2 border-gray-400 z-40 transition-all duration-500 py-5">
+        <div class="container">
+            <nav class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="about.html" class="text-3xl font-bold tracking-wide">
+                    Furni
+                    <span class="inline-block -ml-1 opacity-60">.</span>
+                </a>
+
+                <!-- Desktop menu / login icon / light and dark mode button -->
+                <div id="menu" class="mobile__navbar transition-all duration-400 
+                z-40 lg:desktop__navbar">
+                    <ul class="flex flex-col items-center gap-8 lg:flex-row">
+                        <li class="group relative">
+                            <a href="index.html" class="nav__link font-semibold opacity-50 transition-all duration-200 
+                            py-1 hover:opacity-100">
+                            Home
+                            </a>
+                            <div class="link__underline absolute -bottom-1 inset-x-0 w-0 border-b-2 border-orange-300 opacity-0 transition-all duration-200 
+                            pointer-events-none group-hover:opacity-100 lg:group-hover:w-full">
+                            </div>
+                        </li>
+    
+                        <li class="group relative">
+                            <a href="shop.html" class="nav__link font-semibold opacity-50 transition-all duration-200  
+                            py-1 hover:opacity-100">
+                            Shop
+                            </a>
+                            <div class="link__underline absolute -bottom-1 inset-x-0 w-0 border-b-2 border-orange-300 opacity-0 transition-all duration-200 
+                            pointer-events-none group-hover:opacity-100 group-hover:w-full">
+                            </div>
+                        </li>
+    
+                        <li class="group relative">
+                            <a href="about.html" class="nav__link active font-semibold opacity-50 transition-all duration-200 
+                            py-1 hover:opacity-100">
+                            About Us
+                            </a>
+                            <div class="link__underline absolute -bottom-1 inset-x-0 w-0 border-b-2 border-orange-300 opacity-0 transition-all duration-200 
+                            pointer-events-none group-hover:opacity-100 group-hover:w-full">
+                            </div>
+                        </li>
+    
+                        <li class="group relative">
+                            <a href="service.html" class="nav__link font-semibold opacity-50 transition-all duration-200 
+                            py-1 hover:opacity-100">
+                            Services
+                            </a>
+                            <div class="link__underline absolute -bottom-1 inset-x-0 w-0 border-b-2 border-orange-300 opacity-0 transition-all duration-200 
+                            pointer-events-none group-hover:opacity-100 group-hover:w-full">
+                            </div>
+                        </li> 
+    
+                        <li class="group relative">
+                            <a href="blog.html" class="nav__link font-semibold opacity-50 transition-all duration-200 
+                            py-1 hover:opacity-100">
+                            Blog
+                            </a>
+                            <div class="link__underline absolute -bottom-1 inset-x-0 w-0 border-b-2 border-orange-300 opacity-0 transition-all duration-200 
+                            pointer-events-none group-hover:opacity-100 group-hover:w-full">
+                            </div>
+                        </li> 
+                        <li class="group relative">
+                            <a href="contact.html" class="nav__link font-semibold opacity-50 transition-all duration-200 
+                            py-1 hover:opacity-100">
+                            Contact Us
+                            </a>
+                            <div class="link__underline absolute -bottom-1 inset-x-0 w-0 border-b-2 border-orange-300 opacity-0 transition-all duration-200 
+                            pointer-events-none group-hover:opacity-100 group-hover:w-full">
+                            </div>
+                        </li> 
+                    </ul>
+
+                    <div class="w-full border border-gray-400 shadow-lg lg:hidden"></div>
+
+                    <div class="flex items-center gap-6 flex-wrap">
+                        <!-- Login button -->
+                        <div class="flex gap-4 flex-wrap">
+                            <button class="opacity-90 px-6 hover:text-customYellow lg:px-0"
+                            type="button"
+                            data-twe-toggle="modal"
+                            data-twe-target="#loginModal"
+                            data-twe-ripple-init>
+                                Login
+                            </button>
+                            <button class="border border-customYellow px-8 py-2 rounded-full bg-customYellow text-black  shadow-md 
+                            transition-all duration-200  hover:shadow-lg hover:bg-opacity-80 lg:px-6 lg:py-1"
+                            type="button"
+                            data-twe-toggle="modal"
+                            data-twe-target="#signupModal"
+                            data-twe-ripple-init>
+                                Sign Up
+                            </button>
+                        </div>
+                        
+                        <!-- Dark/light mode button -->                    
+                        <div id="darkMode" class="inline-flex justify-center items-center w-8 h-8 border border-gray-300 rounded-md cursor-pointer select-none
+                        ml-6 shadow-md hover:shadow-lg hover:border-customYellow sm:ml-0">
+                            <svg id="moon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
+                            <svg id="sun" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hamburger menu -->
+                <div class="lg:hidden w-[24px] h-[24px] flex justify-center items-center">
+                    <div id="hamburger" class="hamburger z-40">
+                        <span class="hamburger-top"></span>
+                        <span class="hamburger-middle"></span>
+                        <span class="hamburger-bottom"></span>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <section id="header" class="bg-darkGreen pt-32 pb-24 text-white mb-36">
+        <header>
+            <div class="container">
+                <div class="flex flex-col items-center gap-6 lg:flex-row">
+                    <!-- header content -->
+                    <div class="w-full lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="inline-block rounded-full shadow-md border border-gray-400/50 px-6 py-2 mb-4 text-xl">
+                            <ol class="list-reset flex">
+                              <li>
+                                <a
+                                  href="index.html"
+                                  class="text-primary-accent-200 transition duration-150 ease-in-out hover:text-primary-accent-300 focus:text-primary-accent-300 active:text-primary-accent-300 motion-reduce:transition-none dark:text-primary-400"
+                                  >Home</a
+                                >
+                              </li>
+                              <li>
+                                <span class="mx-2 text-neutral-400">></span>
+                              </li>
+                              <li class="text-neutral-400">About Us</li>
+                            </ol>
+                        </div>
+                        <p class="header__description">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique Lorem ipsum dolor sit amet consectetur.</p>        
+                    </div>
+                    <!-- header cover -->
+                    <div class="w-full lg:w-1/2 min-h-80 relative" data-aos="fade-left" data-aos-duration="1000">
+                        <img class="absolute top-0 left-0 scale-105 lg:scale-125 z-10" src="images/couch.png" alt="">
+                        <img class="absolute -z-0 top-28 right-0 translate-y-[-50%] translate-x-[50%]" src="images/dots-light.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!-- Main -->
+    <main>
+        <!-- Why choose us section -->
+        <section id="chooseUs" class="py-20 my-20">
+            <!-- container of choose us section -->
+            <div class="container">
+                <div class="flex flex-col gap-36 lg:flex-row lg:gap-8">
+                    <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="170">
+                        <h3 class="section__title mb-4">Why Choose Us?</h3>
+                        <p class="opacity-70 mb-8">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>    
+                        <div class="flex gap-4 flex-wrap">
+                            <div class="w-[48%] flex-auto shadow-sm px-2 py-4 dark:shadow-gray-600" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <div class="w-12 h-12 mb-3 relative">
+                                    <img class="size-full dark:invert" src="images/truck.svg" alt="">
+                                    <div class="w-8 h-8 bg-gray-400/60 -z-10 rounded-full absolute top-4 -right-1"></div>    
+                                </div>
+                                <h5 class="text-lg font-semibold mb-2">Fast & Free Shipping</h5>
+                                <p class="text-sm opacity-70">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>    
+                            </div>
+    
+                            <div class="w-[48%] flex-auto shadow-sm px-2 py-4 dark:shadow-gray-600" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <div class="w-12 h-12 mb-3 relative">
+                                    <img class="size-full dark:invert" src="images/bag.svg" alt="">
+                                    <div class="w-8 h-8 bg-gray-400/60 -z-10 rounded-full absolute top-4 -right-1"></div>    
+                                </div>
+                                <h5 class="text-lg font-semibold mb-2">Easy to Shop</h5>
+                                <p class="text-sm opacity-70">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>    
+                            </div>
+    
+                            <div class="w-[48%] flex-auto shadow-sm px-2 py-4 dark:shadow-gray-600" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <div class="w-12 h-12 mb-3 relative">
+                                    <img class="size-full dark:invert" src="images/support.svg" alt="">
+                                    <div class="w-8 h-8 bg-gray-400/60 -z-10 rounded-full absolute top-4 -right-1"></div>    
+                                </div>
+                                <h5 class="text-lg font-semibold mb-2">24/7 Support</h5>
+                                <p class="text-sm opacity-70">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>    
+                            </div>
+                            <div class="w-[48%] flex-auto shadow-sm px-2 py-4 dark:shadow-gray-600" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <div class="w-12 h-12 mb-3 relative">
+                                    <img class="size-full dark:invert" src="images/truck.svg" alt="">
+                                    <div class="w-8 h-8 bg-gray-400/60 -z-10 rounded-full absolute top-4 -right-1"></div>    
+                                </div>
+                                <h5 class="text-lg font-semibold mb-2">Fast & Free Shipping</h5>
+                                <p class="text-sm opacity-70">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 relative" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="170">
+                        <div class="lg:max-w-[530px] text-right ml-auto">
+                            <img class="size-full object-fit rounded-2xl" src="images/why-choose-us-img.jpg" alt="">
+                        </div>
+                        <img class="absolute top-0 translate-y-[-50%] translate-x-[-50%] -z-10 lg:translate-x-2" src="images/dots-yellow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our team section -->
+        <section id="our-team" class="py-20 mb-10">
+            <div class="container">
+                <div class="text-center mb-12" data-aos="fade-down">
+                    <h3 class="section__title mb-4">Our team</h3>
+                    <p class="section__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo porro sint, pariatur repudiandae ex earum eaque architecto iusto tempora. Ex.</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <div class="shadow rounded-xl overflow-hidden group dark:shadow-gray-600" data-aos="flip-left" data-aos-duration="1000" data-aos-offset="300">
+                        <!-- cover -->
+                        <div class="relative overflow-hidden">
+                            <img src="images/person_1.jpg" alt="">
+                            <!-- bg-gradient -->
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0
+                            transition-all duration-200 group-hover:opacity-100">
+                            </div>
+                            <!-- Social list of person -->
+                            <div class="absolute -bottom-[20%] left-[50%] translate-x-[-50%] flex gap-3 py-2 transition-all duration-200 group-hover:bottom-0">
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer 
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content -->
+                        <div class="p-4">
+                            <h3 class="text-3xl font-semibold mb-2 opacity-80">Lawson Arnold</h3>
+                            <h5 class="mb-6 opacity-70">Sales Manager</h5>
+
+                            <p class="text-sm opacity-70 mb-4">Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+
+                            <a href="#" class="inline-flex items-center underline-none underline-offset-4 hover:underline group">
+                                Learn more
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 ml-1 mt-1 transition-all duration-200 group-hover:translate-x-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+                                </svg>                                  
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="shadow rounded-xl overflow-hidden group dark:shadow-gray-600" data-aos="flip-left" data-aos-duration="1000" data-aos-offset="350">
+                        <!-- cover -->
+                        <div class="relative overflow-hidden">
+                            <img src="images/person_2.jpg" alt="">
+                            <!-- bg-gradient -->
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0
+                            transition-all duration-200 group-hover:opacity-100">
+                            </div>
+                            <!-- Social list of person -->
+                            <div class="absolute -bottom-[20%] left-[50%] translate-x-[-50%] flex gap-3 py-2 transition-all duration-200 group-hover:bottom-0">
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer 
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content -->
+                        <div class="p-4">
+                            <h3 class="text-3xl font-semibold mb-2 opacity-80">Jeremy Walker</h3>
+                            <h5 class="mb-6 opacity-70">Digital Marketing Manager</h5>
+
+                            <p class="text-sm opacity-70 mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi dolorem quos saepe repellat laudantium inventore.</p>
+
+                            <a href="#" class="inline-flex items-center underline-none underline-offset-4 hover:underline group">
+                                Read more
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 ml-1 mt-1 transition-all duration-200 group-hover:translate-x-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+                                </svg>                                  
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="shadow rounded-xl overflow-hidden group dark:shadow-gray-600" data-aos="flip-left" data-aos-duration="1000" data-aos-offset="400">
+                        <!-- cover -->
+                        <div class="relative overflow-hidden">
+                            <img src="images/person_3.jpg" alt="">
+                            <!-- bg-gradient -->
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0
+                            transition-all duration-200 group-hover:opacity-100">
+                            </div>
+                            <!-- Social list of person -->
+                            <div class="absolute -bottom-[20%] left-[50%] translate-x-[-50%] flex gap-3 py-2 transition-all duration-200 group-hover:bottom-0">
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer 
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                            </div>    
+                        </div>
+                        <!-- content -->
+                        <div class="p-4">
+                            <h3 class="text-3xl font-semibold mb-2 opacity-80">Patrik White</h3>
+                            <h5 class="mb-6 opacity-70">Decoration Architect</h5>
+
+                            <p class="text-sm opacity-70 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas est quidem dignissimos officia, aliquam enim ?</p>
+
+                            <a href="#" class="inline-flex items-center underline-none underline-offset-4 hover:underline group">
+                                Read more
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 ml-1 mt-1 transition-all duration-200 group-hover:translate-x-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+                                </svg>                                  
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="shadow rounded-xl overflow-hidden group dark:shadow-gray-600" data-aos="flip-left" data-aos-duration="1000" data-aos-offset="450">
+                        <!-- cover -->
+                        <div class="relative overflow-hidden">
+                            <img src="images/person_4.jpg" alt="">
+                            <!-- bg-gradient -->
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0
+                            transition-all duration-200 group-hover:opacity-100">
+                            </div>
+                            <!-- Social list of person -->
+                            <div class="absolute -bottom-[20%] left-[50%] translate-x-[-50%] flex gap-3 py-2 transition-all duration-200 group-hover:bottom-0">
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer 
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </div>
+        
+                                <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                                transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                            </div>    
+                        </div>
+                        <!-- content -->
+                        <div class="p-4">
+                            <h3 class="text-3xl font-semibold mb-2 opacity-80">Kathryn Ryan</h3>
+                            <h5 class="mb-6 opacity-70">Site Supporter</h5>
+
+                            <p class="text-sm opacity-70 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis commodi rerum accusantium repellendus ipsum .</p>
+
+                            <a href="#" class="inline-flex items-center underline-none underline-offset-4 hover:underline group">
+                                Read more
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 ml-1 mt-1 transition-all duration-200 group-hover:translate-x-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+                                </svg>                                  
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What we doing? -->
+        <section id="what-we-doing" class="pt-10 pb-20 mb-32">
+            <div class="container max-w-3xl">
+                <div id="accordionExample" class="rounded-t-lg rounded-b-lg overflow-hidden border">
+                    <div
+                      class="border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-slate-700">
+                      <h2 class="mb-0" id="headingOne">
+                        <button
+                          class="group relative flex w-full items-center rounded-t-lg border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-slate-700 dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-slate-100 [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-slate-800 dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                          type="button"
+                          data-twe-collapse-init
+                          data-twe-collapse-collapsed
+                          data-twe-target="#collapseOne"
+                          aria-expanded="false"
+                          aria-controls="collapseOne">
+                          Shipping Cost
+                          <span
+                            class="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor">
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                          </span>
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseOne"
+                        class="!visible hidden"
+                        data-twe-collapse-item
+                        aria-labelledby="headingOne"
+                        data-twe-parent="#accordionExample">
+                        <div class="px-5 py-4">
+                          <strong class="opacity-80">The cost of shipping products: </strong><span class="opacity-70">
+                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore totam possimus, cumque ipsum fuga eos est saepe nostrum omnis vero enim aliquid odio vitae? Totam laboriosam nihil officia inventore. Aut.
+                              Nam dignissimos nostrum fugit expedita, maxime neque tenetur! Sunt libero quos, impedit dolore illo numquam sint molestiae at ad amet ipsa earum reprehenderit. Necessitatibus aperiam sapiente veritatis veniam, magni nulla?
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-slate-700">
+                      <h2 class="mb-0" id="headingTwo">
+                        <button
+                          class="group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-slate-700 dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-slate-100 [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-slate-800 dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                          type="button"
+                          data-twe-collapse-init
+                          data-twe-collapse-collapsed
+                          data-twe-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo">
+                          Guaranteed Prices
+                          <span
+                            class="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6 ">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor">
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                          </span>
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseTwo"
+                        class="!visible hidden"
+                        data-twe-collapse-item
+                        aria-labelledby="headingTwo"
+                        data-twe-parent="#accordionExample">
+                        <div class="px-5 py-4">
+                          <strong class="opacity-80">Guaranteed an affordable pricess for products: </strong> <span class="opacity-70">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis laborum veniam nisi sequi! Tempora atque voluptatum quo beatae incidunt, quasi illum id quod aliquam reiciendis deserunt earum error ad.
+                            Quidem tempore veniam tempora nostrum repellendus quam neque mollitia quas error. Saepe voluptatibus qui repudiandae excepturi ea. Fugiat beatae dolorem esse harum placeat aut, consequuntur animi modi nam sint in?
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div
+                      class="border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-slate-700">
+                      <h2 class="accordion-header mb-0" id="headingThree">
+                        <button
+                          class="data-[twe-collapse-collapsed] group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none data-[twe-collapse-collapsed]:rounded-b-lg dark:bg-slate-700 dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-slate-100 [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-slate-800  dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10"
+                          type="button"
+                          data-twe-collapse-init
+                          data-twe-collapse-collapsed
+                          data-twe-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree">
+                          Various products
+                          <span
+                            class="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor">
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                          </span>
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseThree"
+                        class="!visible hidden"
+                        data-twe-collapse-item
+                        aria-labelledby="headingThree"
+                        data-twe-parent="#accordionExample">
+                        <div class="px-5 py-4">
+                          <strong class="opacity-80">High variety of products: </strong><span class="opacity-70">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum suscipit hic eum sequi et. Atque tempore dicta omnis laborum sit incidunt repellendus, aperiam sunt soluta quasi harum sapiente deleniti totam.
+                            Consequatur minus veritatis dolore tempora inventore mollitia consequuntur repudiandae laboriosam quasi atque libero tempore blanditiis, culpa exercitationem maiores quos omnis explicabo similique delectus suscipit sapiente? Porro eos consequuntur dolorum odit?
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="rounded-b-lg border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-slate-700">
+                      <h2 class="accordion-header mb-0" id="headingThree">
+                        <button
+                          class="data-[twe-collapse-collapsed] group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none data-[twe-collapse-collapsed]:rounded-b-lg dark:bg-slate-700 dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-slate-100 [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-slate-800  dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10"
+                          type="button"
+                          data-twe-collapse-init
+                          data-twe-collapse-collapsed
+                          data-twe-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour">
+                          Guaranteed return products
+                          <span
+                            class="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor">
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                          </span>
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFour"
+                        class="!visible hidden"
+                        data-twe-collapse-item
+                        aria-labelledby="headingFour"
+                        data-twe-parent="#accordionExample">
+                        <div class="px-5 py-4">
+                          <strong class="opacity-80">Guaranteed the return of products</strong><span class="opacity-70">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum suscipit hic eum sequi et. Atque tempore dicta omnis laborum sit incidunt repellendus, aperiam sunt soluta quasi harum sapiente deleniti totam.
+                            Consequatur minus veritatis dolore tempora inventore mollitia consequuntur repudiandae laboriosam quasi atque libero tempore blanditiis, culpa exercitationem maiores quos omnis explicabo similique delectus suscipit sapiente? Porro eos consequuntur dolorum odit?
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-white py-20 dark:bg-slate-700">
+        <div class="container">
+            <!-- Newsletter section of footer -->
+            <div class="flex flex-col-reverse lg:flex-row mb-12">
+                <div class="lg:w-1/2 mt-32 lg:mt-0">
+                    <div class="flex items-center gap-2 text-lg font-semibold mb-4">
+                        <img src="images/envelope-outline.svg" alt="">
+                        <span class="opacity-80">
+                            Subscribe to Newsletter  
+                        </span>  
+                    </div>
+
+                    <form class="flex items-center gap-4 flex-wrap">
+                        <input type="text" class="grow border border-gray-300 p-3 rounded-lg placeholder:text-gray-500" placeholder="Enter your name">
+                        <input type="email" class="grow border border-gray-300 p-3 rounded-lg placeholder:text-gray-500" placeholder="Enter your email">
+                        <button class="grow flex items-center justify-center text-white w-16 h-12 px-5 bg-lightGreen rounded-lg shadow-md 
+                        transition-all duration-200 hover:shadow-xl hover:scale-105">
+                        <i class="fa-solid fa-paper-plane"></i>                         
+                        </button>
+                    </form>
+                </div>
+
+                <div class="lg:w-1/2 relative">
+                    <img class="w-full absolute top-0 right-0 translate-y-[-60%] max-w-[360px] ml-auto drop-shadow-2xl"
+                    src="images/sofa.png" 
+                    alt="">
+                </div>
+            </div>
+
+            <!-- main parts of footer -->
+            <div class="flex flex-col justify-between gap-14 lg:flex-row">
+                <div class="space-y-6 lg:w-2/5 md:pr-20">
+                    <h4 class="font-semibold text-3xl opacity-70"> 
+                        <a href="index.html">Furni.</a>
+                    </h4>
+                    <p class="opacity-60 text-sm">
+                        Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant
+                    </p>
+
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer 
+                        transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                        transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                        transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center text-xl text-darkGreen cursor-pointer
+                        transition-all duration-200 drop-shadow-md hover:bg-lightGreen hover:drop-shadow-xl hover:text-white">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-3/5 lg:mt-12">
+                    <div class="grid grid-cols-1 gap-10 text-sm  sm:grid-cols-2 lg:grid-cols-4">
+                        <ul class="flex flex-col gap-4">
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">About Us</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Services</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Blog</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <ul class="flex flex-col gap-4">
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Support</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Knowledge base</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Live chat</a>
+                            </li>
+                        </ul>
+
+                        <ul class="flex flex-col gap-4">
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Jobs</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Our team</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Leadership</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Privacy policy</a>
+                            </li>
+                        </ul>
+
+                        <ul class="flex flex-col gap-4">
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Nordic chair</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Kruzo areo</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" class="transition-all duration-200 hover:opacity-50">Ergonomic chair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-6">
+
+            <!-- Copy right -->
+            <div class="flex flex-col justify-between items-center gap-6 flex-wrap text-center sm:flex-row">
+                <h3>Website developer: <a href="#" class="transition-all duration-200 hover:underline hover:tracking-wide hover:text-lightGreen" title="See my resume">Moein Ghiasvand</a></h3>
+                
+                <p>Copyright &copy; 2024, All rights reserved. Designed with love by <a href="#" class="underline">Untree.co</a> Distributed By ThemeWagon</p>
+            </div>
+        </div>
+    </footer>        
+    </div>
+
+
+        <!-- Login modal -->
+        <div
+        data-twe-modal-init
+        data-twe-class-backdrop="opacity-70 transition-all duration-300 ease-in-out fixed top-0 left-0 z-[1040] bg-black w-screen h-screen"
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="loginModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div
+          data-twe-modal-dialog-ref
+          class="pointer-events-none relative w-auto min-h-screen translate-y-[-50px] opacity-0 mt-20 px-4 transition-all duration-300  ease-in-out min-[576px]:mx-auto min-[576px]:max-w-[500px]">
+          <div
+            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
+            <div
+              class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
+              <h5
+                class="text-xl font-medium leading-normal text-surface dark:text-white"
+                id="exampleModalLabel">
+                Login form
+              </h5>
+              <button
+                type="button"
+                class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                data-twe-modal-dismiss
+                aria-label="Close">
+                <span class="[&>svg]:h-6 [&>svg]:w-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+  
+            <!-- Modal body -->
+            <div class="relative flex-auto p-4" data-twe-modal-body-ref>
+              <form>
+                  <div class="flex flex-col items-center">
+                      <div class="w-full space-y-4 mb-6">
+                          <div class="w-full">
+                              <div class="relative" data-twe-input-wrapper-init>
+                                  <input
+                                    required  
+                                    type="email"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="userEmail-login"
+                                    placeholder="Email ID" />
+                                  <label
+                                    for="exampleFormControlInput1"
+                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
+                                    >Email ID
+                                  </label>
+                              </div>
+                          </div>
+      
+                          <div class="w-full">
+                              <div class="relative" data-twe-input-wrapper-init>
+                                  <input
+                                    required  
+                                    type="password"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="userpassword-login"
+                                    placeholder="Password" />
+                                  <label
+                                    for="exampleFormControlInput1"
+                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
+                                    >Password
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <div class="w-full flex justify-between">
+                          <div class="mb-[0.125rem] block min-h-[1.5rem] ps-[1.5rem]">
+                              <input
+                                class="relative float-left -ms-[1.5rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ms-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ms-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent rtl:float-right dark:border-neutral-400 dark:checked:border-primary dark:checked:bg-primary"
+                                type="checkbox"
+                                value=""
+                                id="checkboxDefault" />
+                              <label
+                                class="inline-block ps-[0.15rem] hover:cursor-pointer"
+                                for="checkboxDefault">
+                                Remember me
+                              </label>
+                          </div>
+                          <a href="#" class="opacity-70 text-lightGreen underline underline-offset-2 transition-all italic duration-200 hover:opacity-100">Forgot Password?</a>
+                      </div>
+  
+                      <div class="w-full my-6">
+                          <button type="submit" class="w-full py-3 bg-lightGreen bg-opacity-80 text-white font-semibold rounded-md transition-all duration-200 hover:bg-opacity-100">Login</button>
+                      </div>
+  
+                      <p>Don't have an account? <a href="#" class="opacity-70 text-lightGreen underline underline-offset-2 transition-all italic duration-200 hover:opacity-100"
+                          type="button"
+                          id="signupModalBtn"
+                          data-twe-toggle="modal"
+                          data-twe-target="#signupModal"
+                          data-twe-modal-dismiss>
+                          Sign up
+                          </a>
+                      </p>
+                  </div>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  
+      <!-- signup modal -->
+      <div
+        data-twe-modal-init
+        data-twe-class-backdrop="opacity-70 transition-all duration-300 ease-in-out fixed top-0 left-0 z-[1040] bg-black w-screen h-screen"
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="signupModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div
+          data-twe-modal-dialog-ref
+          class="pointer-events-none relative w-auto min-h-screen translate-y-[-50px] opacity-0 mt-20 px-4 transition-all duration-300  ease-in-out min-[576px]:mx-auto min-[576px]:max-w-[500px]">
+          <div
+            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
+            <div
+              class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
+              <h5
+                class="text-xl font-medium leading-normal text-surface dark:text-white"
+                id="exampleModalLabel">
+                Sign up form
+              </h5>
+              <button
+                type="button"
+                class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                data-twe-modal-dismiss
+                aria-label="Close">
+                <span class="[&>svg]:h-6 [&>svg]:w-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+  
+            <!-- Modal body -->
+            <div class="relative flex-auto p-4" data-twe-modal-body-ref>
+              <form>
+                  <div class="flex flex-col items-center">
+                      <div class="space-y-4 mb-6 w-full">
+                          <div class="w-full">
+                              <div class="relative" data-twe-input-wrapper-init>
+                                  <input
+                                    required  
+                                    type="email"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="userEmail-signup"
+                                    placeholder="Email ID" />
+                                  <label
+                                    for="exampleFormControlInput1"
+                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
+                                    >Email ID
+                                  </label>
+                              </div>
+                          </div>
+                          
+                          <div class="w-full">
+                              <div class="relative" data-twe-input-wrapper-init>
+                                      <input
+                                        required  
+                                        type="password"
+                                        class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                                        id="userPassword-login"
+                                        placeholder="Enter password" />
+                                      <label
+                                        for="exampleFormControlInput1"
+                                        class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
+                                        >Enter password
+                                      </label>
+                              </div>
+                          </div>
+  
+                          <div class="w-full">
+                              <div class="relative" data-twe-input-wrapper-init>
+                                  <input
+                                    required  
+                                    type="password"
+                                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                                    id="userRePassword-login"
+                                    placeholder="Re-Enter password" />
+                                  <label
+                                    for="exampleFormControlInput1"
+                                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
+                                    >Re-Enter password
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <div class="w-full flex justify-between">
+                          <div class="mb-[0.125rem] block min-h-[1.5rem] ps-[1.5rem]">
+                              <input
+                                class="relative float-left -ms-[1.5rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ms-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ms-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent rtl:float-right dark:border-neutral-400 dark:checked:border-primary dark:checked:bg-primary"
+                                type="checkbox"
+                                value=""
+                                id="checkboxDefault" />
+                              <label
+                                class="inline-block ps-[0.15rem] hover:cursor-pointer"
+                                for="checkboxDefault">
+                                Remember me
+                              </label>
+                          </div>
+                      </div>
+  
+                      <div class="w-full my-6">
+                          <button type="submit" class="w-full py-3 bg-lightGreen bg-opacity-80 text-white font-semibold rounded-md transition-all duration-200 hover:bg-opacity-100">Login</button>
+                      </div>
+  
+                      <p>Already have an account? <a href="#" class="opacity-70 text-lightGreen underline underline-offset-2 transition-all italic duration-200 hover:opacity-100"
+                          type="button"
+                          id="loginModalBtn"
+                          data-twe-toggle="modal"
+                          data-twe-target="#loginModal"
+                          data-twe-modal-dismiss>login</a></p>
+                  </div>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    <!-- tw elements js file -->
+    <script
+    type="text/javascript"
+    src="./node_modules/tw-elements/js/tw-elements.es.min.js">
+    </script>
+    <!-- AOS js file -->
+    <script src="js/aos.js"></script>
+    <!-- js file of project src -->
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
